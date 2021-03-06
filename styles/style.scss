@@ -1,0 +1,143 @@
+.main-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .title-box{
+    margin-top: -5rem;
+    margin-bottom: 5rem;
+    p{
+      font-size: 2.6rem;
+      text-align: center;
+      font-family: Roboto;
+      font-weight: bold;
+      line-height: 1.3;
+      margin: 0;
+      strong{
+        color: springgreen;
+      }
+    }
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    input{
+      width: 20rem;
+      min-height: 2.3rem;
+      border: 1px solid #d3d3d3;
+      padding: 0.6rem 0.6rem 0.6rem 1rem;
+      font-family: Roboto;
+      outline-color: mediumspringgreen;
+      &:last-child{
+        padding: 0.6rem;
+        text-transform: uppercase;
+        outline: none;
+        background: mediumspringgreen;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover{
+          background: transparent;
+          border: 1px solid mediumspringgreen;
+          color: mediumspringgreen;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+  .head-box{
+    position: absolute;
+    text-align: center;
+    padding: 3rem;
+    width: 100%;
+    top: 0;
+    h1{
+      display: inline;
+      line-height: 2rem;
+      font-family: Roboto;
+      font-weight: bold;
+    }
+    .exit-buttom,.back-buttom{
+      &:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
+      border: none;
+      outline: none;
+      cursor: pointer;
+      line-height: 2rem;
+      width: 3rem;
+      float: right;
+      background: transparent;
+      img{
+        width: 100%;
+      }
+    }
+    .back-buttom{
+      float: left;
+    }
+  }
+  .students-box,.up-students-box{
+    width: 80vw;
+    .table{
+      button{
+        background: transparent;
+        width: 2.3rem;
+        cursor: pointer;
+        outline: none;
+        border: none;
+      }
+      img{
+        width: 100%;
+      }
+    }
+    .add-student{
+      background-color: transparent;
+      border: none;
+      outline: none;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-family: Roboto;
+      cursor: pointer; 
+      img{
+        width: 2.5rem;
+      }
+    }
+  }
+  .up-students-box{
+    width: 60vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+    input{
+      width: 100%;
+      outline: none;
+      border: none;
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 0.4rem;
+    }
+    button{
+      width: 12rem;
+      padding: 0.6rem;
+      border: 1px solid mediumspringgreen;
+      text-transform: uppercase;
+      outline: none;
+      background: mediumspringgreen;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      &:hover{
+        background: transparent;
+        border: 1px solid mediumspringgreen;
+        color: mediumspringgreen;
+        transition: 0.3s;
+      }
+    }
+  }
+}

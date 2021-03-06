@@ -1,0 +1,189 @@
+.main-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container .title-box {
+  margin-top: -5rem;
+  margin-bottom: 5rem;
+}
+
+.main-container .title-box p {
+  font-size: 2.6rem;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: bold;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.main-container .title-box p strong {
+  color: springgreen;
+}
+
+.main-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main-container form input {
+  width: 20rem;
+  min-height: 2.3rem;
+  border: 1px solid #d3d3d3;
+  padding: 0.6rem 0.6rem 0.6rem 1rem;
+  font-family: Roboto;
+  outline-color: mediumspringgreen;
+}
+
+.main-container form input:last-child {
+  padding: 0.6rem;
+  text-transform: uppercase;
+  outline: none;
+  background: mediumspringgreen;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-container form input:last-child:hover {
+  background: transparent;
+  border: 1px solid mediumspringgreen;
+  color: mediumspringgreen;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .head-box {
+  position: absolute;
+  text-align: center;
+  padding: 3rem;
+  width: 100%;
+  top: 0;
+}
+
+.main-container .head-box h1 {
+  display: inline;
+  line-height: 2rem;
+  font-family: Roboto;
+  font-weight: bold;
+}
+
+.main-container .head-box .exit-buttom, .main-container .head-box .back-buttom {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  line-height: 2rem;
+  width: 3rem;
+  float: right;
+  background: transparent;
+}
+
+.main-container .head-box .exit-buttom:hover, .main-container .head-box .back-buttom:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-container .head-box .exit-buttom img, .main-container .head-box .back-buttom img {
+  width: 100%;
+}
+
+.main-container .head-box .back-buttom {
+  float: left;
+}
+
+.main-container .students-box, .main-container .up-students-box {
+  width: 80vw;
+}
+
+.main-container .students-box .table button, .main-container .up-students-box .table button {
+  background: transparent;
+  width: 2.3rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.main-container .students-box .table img, .main-container .up-students-box .table img {
+  width: 100%;
+}
+
+.main-container .students-box .add-student, .main-container .up-students-box .add-student {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-family: Roboto;
+  cursor: pointer;
+}
+
+.main-container .students-box .add-student img, .main-container .up-students-box .add-student img {
+  width: 2.5rem;
+}
+
+.main-container .up-students-box {
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.main-container .up-students-box input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.main-container .up-students-box button {
+  width: 12rem;
+  padding: 0.6rem;
+  border: 1px solid mediumspringgreen;
+  text-transform: uppercase;
+  outline: none;
+  background: mediumspringgreen;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-container .up-students-box button:hover {
+  background: transparent;
+  border: 1px solid mediumspringgreen;
+  color: mediumspringgreen;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/*# sourceMappingURL=style.css.map */
