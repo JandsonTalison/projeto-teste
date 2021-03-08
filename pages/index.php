@@ -16,7 +16,7 @@
     <div class="title-box">
       <p>Bem-Vindo ao <strong>eClass</strong>,<br>Professor!</p>
     </div>
-    <form action="enrolled-students.html" method="get">
+    <form action="enrolled-students.php" method="get">
       <input type="text" class="login" placeholder="Login">
       <input type="password" class="password" placeholder="Senha">
       <input type="submit" value="acessar">

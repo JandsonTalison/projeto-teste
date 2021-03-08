@@ -15,7 +15,7 @@
   <div class="main-container">
     <div class="head-box">
       <h1>Inserção de aluno</h1>
-      <button class="back-buttom">
+      <button class="back-buttom" onclick="window.location.href = 'enrolled-students.php'">
         <img src="../assets/arrow-left.png" alt="" srcset="">
       </button>
     </div>
@@ -31,10 +31,10 @@
           <tr>
             <form action="../php/process.php" method="POST">
               <td>
-                <input type="text" name="name" id="" value="" required>
+                <input type="text" name="name" id="" value="" autocomplete="off" required>
               </td>
               <td>
-                <input type="text" name="subject" value="" required>
+                <input type="text" name="subject" value="" autocomplete="off" required>
               </td>
               <button type="submit" class="update-buttom">Inserir</button>
             </form>

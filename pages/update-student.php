@@ -9,46 +9,45 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="shortcut icon" href="../assets/page-icon.png" type="image/x-icon">
   <title>eClass</title>
+  <?php 
+    include_once "../php/connection.php";
+    $id = $_GET['id'];
+    $read_query = "SELECT nome,materias FROM alunos WHERE id='$id'";
+    $read_query_result = mysqli_query($conn,$read_query);
+    $student_row = mysqli_fetch_assoc($read_query_result);
+  ?>
 </head>
 <body>
   
   <div class="main-container">
     <div class="head-box">
-      <h1>Alunos matriculados</h1>
-      <button class="exit-buttom">
-        <img src="../assets/exit-buttom-bg.png" alt="" srcset="">
+      <h1>Atualização de alunos</h1>
+      <button class="back-buttom" onclick="window.location.href = 'enrolled-students.php'">
+        <img src="../assets/arrow-left.png" alt="" srcset="">
       </button>
     </div>
-    <div class="students-box">
+    <div class="up-students-box">
       <table class="table table-striped table-bordered text-center">
         <thead>
           <tr>
             <th scope="col">Nome</th>
             <th scope="col">Matéria</th>
-            <th scope="col">Excluir</th>
-            <th scope="col">Atualizar</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Jandson</td>
-            <td>Física</td>
-            <td>
-              <button>
-                <img src="../assets/trash-bg.png" alt="">
-              </button>
-            </td>
-            <td>
-              <button>
-                <img src="../assets/pencil-bg.png" alt="">
-              </button>
-            </td>
+            <form action="../php/upt-student.php" method="POST">
+              <td>
+                <input type="hidden" name="id" value="<?=$id?>">
+                <input type="text" name="name" value="<?php echo utf8_encode($student_row['nome'])?>" autocomplete="off" required>
+              </td>
+              <td>
+                <input type="text" name="subject" value="<?php echo utf8_encode($student_row['materias'])?>" autocomplete="off" required>
+              </td>
+              <button type="submit" class="update-buttom">Salvar</button>
+            </form>
           </tr>
         </tbody>
-        <button class="add-student">
-          Matricular aluno
-          <img src="../assets/plus-bg.png" alt="">
-        </button>
       </table>
     </div>
   </div>

@@ -9,37 +9,68 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="shortcut icon" href="../assets/page-icon.png" type="image/x-icon">
   <title>eClass</title>
+  <?php
+    include_once "../php/connection.php";
+    $read_query = "SELECT * FROM alunos";
+    $read_query_result = mysqli_query($conn,$read_query);
+  ?>
 </head>
 <body>
   
   <div class="main-container">
     <div class="head-box">
-      <h1>Atualização de alunos</h1>
-      <button class="back-buttom">
-        <img src="../assets/arrow-left.png" alt="" srcset="">
-      </button>
+      <h1>Alunos matriculados</h1>
+      <a class="exit-buttom" href="index.php">
+        <img src="../assets/exit-buttom-bg.png">
+      </a>
     </div>
-    <div class="up-students-box">
+    <div class="students-box">
       <table class="table table-striped table-bordered text-center">
         <thead>
           <tr>
             <th scope="col">Nome</th>
             <th scope="col">Matéria</th>
+            <th scope="col">Excluir</th>
+            <th scope="col">Atualizar</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <form action="" method="POST">
+          <?php
+            while($student_row = mysqli_fetch_assoc($read_query_result)){
+          ?>
+            <tr>
               <td>
-                <input type="text" name="" id="" value="Jandson" required>
+                <?php
+                  echo utf8_encode($student_row['nome']);
+                ?>
               </td>
               <td>
-                <input type="text" name="" value="Física" required>
+                <?php
+                  echo utf8_encode($student_row['materias']);
+                ?>
               </td>
-              <button type="submit" class="update-buttom">Salvar</button>
-            </form>
-          </tr>
+              <td>
+                <?php echo "<a href='../php/delete-student.php?id=".$student_row['id']."'>"?>
+                  <button>
+                    <img src="../assets/trash-bg.png" alt="">
+                  </button>
+                <?php echo"</a>";?> 
+              </td>
+              <td>
+                <?php echo "<a href='update-student.php?id=".$student_row['id']."'>"?>
+                  <button onclick="window.location.href = 'update-student.php'">
+                    <img src="../assets/pencil-bg.png" alt="">
+                  </button>
+                <?php echo"</a>";?> 
+              </td>
+            </tr>
+
+          <?php }?>
         </tbody>
+        <button class="add-student" onclick="window.location.href = 'insert-student.php'">
+          Matricular aluno
+          <img src="../assets/plus-bg.png" alt="">
+        </button>
       </table>
     </div>
   </div>

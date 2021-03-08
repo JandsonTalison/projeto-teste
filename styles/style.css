@@ -129,7 +129,7 @@
 }
 
 .main-container .students-box .add-student, .main-container .up-students-box .add-student {
-  background-color: transparent;
+  background: transparent;
   border: none;
   outline: none;
   margin-bottom: 2rem;
